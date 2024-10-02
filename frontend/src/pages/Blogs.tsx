@@ -5,7 +5,11 @@ import { useBlogs } from '../hooks'
 function Blogs() {
   const {loading, blogs} = useBlogs();
 
-  if (loading || !blogs) {
+  if(!blogs){
+    return <div>Blogs not found !!</div>
+  }
+
+  if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="w-1/3">
