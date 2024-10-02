@@ -1,4 +1,3 @@
-import React from 'react'
 import { BlogCard } from '../components/BlogCard'
 import { AppBar } from '../components/AppBar'
 import { useBlogs } from '../hooks'
@@ -6,7 +5,7 @@ import { useBlogs } from '../hooks'
 function Blogs() {
   const {loading, blogs} = useBlogs();
 
-  if (loading) {
+  if (loading || !blogs) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="w-1/3">
