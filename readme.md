@@ -3,6 +3,8 @@
 
 This repository contains the serverless backend for a Medium-like application, built using **Cloudflare Workers**. The backend architecture uses **Prisma** with connection pooling to manage the database interactions effectively. Additionally, a reusable **npm package for Zod validation** has been created, allowing validation logic to be shared between the backend and frontend.
 
+Live link - https://medium-gngd3onoz-adbhut07s-projects.vercel.app/blogs
+
 ## Features
 
 - **Serverless Architecture**: Built on **Cloudflare Workers**, offering scalability, low-latency, and ease of deployment.
