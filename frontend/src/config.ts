@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://backend.adbhut-rei-2233.workers.dev"

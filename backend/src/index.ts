@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { sign, verify } from 'hono/jwt'
+import { cors } from 'hono/cors'
 import { userRouter } from "./routes/user";
 import { blogRouter } from "./routes/blog";
 
@@ -12,13 +12,14 @@ const app = new Hono<{
   };
 }>();
 
+app.use('/api/*', cors())
 app.route("/api/v1/user", userRouter);
 app.route("/api/v1/blog", blogRouter);
 
 
 app.get("/", (c) => {
   // c stands for context
-  return c.text("Hello Hono!");
+  return c.text("Hello hi Hono!");
 });
 
 
